@@ -1,0 +1,1478 @@
+
+该函数表由百度贴吧的@aa517325894制作
+转载需经过作者同意并且标明原作者
+禁止用于任何商业及利益!
+禁止在未经作者的同意的情况下，修改内容并发布!
+
+该资料仅供参考，作者不承担任何责任
+
+需要方块启动器的上谷歌市场买正版
+
+感谢张卓伟(500ISE)的方块启动器
+
+该函数表对应的启动器版本为1.7.3[1.8.6以下]
+
+特别注意 提示为已停用的函数将会在启动器1.7移除
+
+几个注意的问题:
+由于这是在电脑语言里，第一个数不是1，而是0
+凡是parXString的需要""，格式为"内容"
+
+这些函数应该都是完整的
+不过可能有一些找不到
+
+据研究表明，现在的大部分函数都不会正常执行
+======================================
+适合1.8.6以下
+0.7由@琉★之琉星祤补上
+如果有漏的希望补全
+增加部分函数教程
+帮a5改错⊙▽⊙
+
+======================================
+ModPE函数
+
+无前缀函数
+
+最初的ModPEScripts0.2的函数
+(还不是张卓伟(500ISE)开发时)
+
+addItemInventory(par1int, par2int, par3int);
+添加物品(在玩家的背包里)
+par1int是物品id
+par2int是数量
+par3int是特殊数据
+
+bl_setMobSkin(par1int, par2String);
+方块启动器特有函数
+已停用！
+
+具体用法与Entity类的Entity.setMonSkin()相同
+
+bl_spawnMob(par1double, par2double, par3double, par4int, par5String);
+方块启动器特有函数
+已停用！
+
+具体用法与Level类的Level.spawnMob()相同
+ 
+ 
+clientMessage(par1String);
+在游戏对话栏里输出信息
+pat1String填写输出的信息
+
+ChatColor.
+BOLD    粗字体
+RESET   原版字体
+颜色[BLUE,YELLOW等。。]
+
+
+explode(par1double, par2double, par3double, par4double);
+发生爆炸
+par1double为X坐标
+par2double为Y坐标
+par3double为Z坐标 
+par4double为爆炸的半径
+
+getCarriedItem();
+探测(玩家)手持物品id
+返回值为手持物品的id
+
+getLevel();
+不明
+
+getPitch(par1Object);
+获取par1Object的Y轴视角，既纵向视角
+par1Object填进去实体
+返回值为当前物品的par1Object的Y轴视角 
+ 
+getPlayerEnt();
+获取玩家的实体(就是玩家的实体，对玩家进行操作时实体填这个)
+
+getPlayerX();
+获取玩家的X坐标
+返回值为玩家的X坐标
+
+getPlayerY();
+获取玩家的Y坐标
+返回值为玩家的Y坐标 
+
+getPlayerZ();
+获取玩家的Z坐标
+返回值为玩家的Z坐标 
+
+getTile(par1int, par2int, par3int);
+获取指定坐标的方块id
+par1int填X坐标
+par2int填Y坐标
+par3int填Z坐标 
+返回值为指定坐标的方块id
+
+getYaw(par1Object);
+获取par1Object的X轴视角，既横向视角
+par1Object填实体
+返回值为par1Object的X轴视角
+
+preventDefault();
+阻止默认操作
+这个比较难解释，就是把攻击实体变成阻止攻击实体，比如你使用骨粉点击草方块，草方块就长草，但加上了这个函数，就什么也不会发生
+
+print(par1String);
+在游戏中输出Toast，就是提示栏
+par1String为内容
+
+rideAnimal(par1int, par2int);
+这个就是实体par1int骑上实体par2int
+两个都填实体
+
+setNightMode(par1boolean);
+晚上模式，就是下界反应堆启动器时的那个，超级快晚上
+par1boolean就是布尔值，true或false
+
+setPosition(par1int, par2double, par3double, par4double);
+设定par1int实体的坐标
+par1int填实体
+par2double是X坐标
+par3double是Y坐标 
+par3double是Z坐标
+  
+setPositionRelative(par1int, par2double, par3double, par4double);
+设置指定实体对于自己的相对位置
+par1int填实体
+后面三个分别为x,y,z坐标
+
+setRot(par1int, par2double, par3double);
+设定指定实体的视角
+par1int为实体
+par2double为x视角，既横轴视角
+par3double为y视角，既纵轴视角 
+
+setTile(par1int, par2int, par3int, par4int, par5int);
+设定指定坐标的方块
+par1int为X坐标
+par2int为Y坐标
+par3int为Z坐标
+par4int为方块id(0~255,超过范围启动器将自动调整)
+par5int为方块特殊数据(0~15,超过范围启动器将自动调整)
+
+setVelX(par1int, par2double);
+让指定实体沿着X轴前进
+par1int填实体
+par2double为前进的距离
+
+setVelY(par1int, par2double);
+让指定实体沿着Y轴前进
+par1int填实体
+par2double为前进的距离 
+
+setVelZ(par1int, par2double);
+让指定实体沿着Z轴前进
+par1int填实体
+par2double为前进的距离 
+
+spawnChicken(par1double, par2double, par3double, par4String);
+在指定坐标生成指定皮肤的鸡
+par1double为X坐标
+par2double为Y坐标
+par3double为Z坐标
+par4String为皮肤(在材质包的路径)
+
+spawnCow(par1double, par2double, par3double, par4String);
+在指定坐标生成指定皮肤的牛
+par1double为X坐标
+par2double为Y坐标
+par3double为Z坐标
+par4String为皮肤(在材质包的路径)
+
+spawnPigZombie(par1double, par2double, par3double, par4int, par5String);
+在指定坐标生成指定皮肤手持指定物品的僵尸猪人
+par1double为X坐标
+par2double为Y坐标
+par3double为Z坐标
+par4int为手持物品的id
+par5String为皮肤(在材质包的路径)
+
+C后缀文件里的bl类函数
+
+暂时没有收录该类函数
+
+
+ModPE类函数
+
+各种涉及到MCPE的函数
+ModPE.getBytesFromTexturePack(par1String);
+par1String填路径
+返回材质包字节
+
+ModPE.openInputStreamFromTexturePack(par1String);
+par1String填路径
+从材质包返回输入流
+
+ModPE.getMinecraftVersion();
+返回Minecraftpe版本号
+
+ModPE.getItemName(par1int, par2int, par3boolean);
+获取物品名字前缀
+par1int为id
+par2int为data
+par3boolean不明(填true正常获取，false什么也获取不了)
+168及以上请使用 Item.getName(par1int, par2int, par3boolean);
+ 
+ModPE.joinServer(par1String, par2int);
+进入服务器
+par1String为IP地址
+par2为port端口
+
+ModPE.langEdit(par1String, par2String);
+修改文字引用
+par1String为前缀
+par2String为字符串
+
+ModPE.leaveGame();
+退出存档
+
+ModPE.log(par1String);
+打印指定消息日志
+
+ModPE.overrideTexture(par1String, par2String);
+修改材质文件
+par1String为在材质包内需要替换的图片的路径
+pat2String为替换成的图片
+
+ModPE.readData(par1String);
+读取启动器储存的数据
+par1String为数据的名字
+
+ModPE.removeData(par1String);
+移除(删除)启动器储存的数据
+par1String为数据的名字 
+
+ModPE.resetImages();
+格式化材质包
+
+ModPE.saveData(par1String, par2String);
+储存数据
+par1String为数据的名字  
+par2String为储存的变量在数据里
+
+ModPE.selectLevel(par1String, par2String, par3String, par4int);
+跳转存档
+par1String为存档的根目录
+par2String为存档的名字
+par3String为存档的种子
+par4int为模式
+
+ModPE.setFoodItem(par1int, par2String, par3int, par4int, par5String,par6int);
+设定指定物品为食品(可以做到添加物品)
+par1int为ID
+par2String为材质在item.meta引用的名字
+par3int为材质的排列值
+par4int为补充的血量
+par5String为物品的名字
+par6int为最大堆叠数量
+
+ModPE.setGameSpeed(par1double);
+设定当前游戏最高FPS(其实就是速度)
+par1double为设定的FPS(默认为20)
+1.6.2~1.6.6版本启动器无法使用
+
+ModPE.setGuiBlocks(par1String);
+设定GuiBlick.png(就是把方块放在物品栏里方块的样子)为par1String
+par1String为图片(的路径)
+(图片引用是0.8.0以下版本使用的，080不再使用该设定)
+
+ModPE.setItem(par1int, par2String, par3int, par4String,par5int);
+设定指定物品(可以做到添加物品)
+par1int为ID
+par2String为材质在item.meta引用的名字
+par3int为材质的排列值
+par4String为物品的名字
+par5int为最大堆叠数量 
+   
+ModPE.setItems(par1String);
+设定Items.png(就是手上的物品图标，id256~？？？的物品)为par1String
+par1String为图片(的路径)
+
+ModPE.setTerrain(par1String);
+设定Terrain.meta(方块材质值引用)的路径
+par1String为路径
+
+ModPE.takeScreenshot(par1String);
+在MCPE里截图(因为是内置截图，不能拍到GUI等东西)
+par1String为保存路径
+
+ModPE.addFurnaceRecipe(par1int,par2int,par3int);
+添加熔炉配方
+par1int为烧的物品id
+par2int为烧出来的物品id
+par3int为烧出来的物品data
+168及以上请使用 Item.addFurnaceRecipe(par1int,par2int,par3int);
+ 
+
+ModPE.addCraftRecipe(par1int,par2int,par3int,Scriptable);
+添加合成配方
+par1int为合成输出的物品id
+par2int为合成输出的物品数量
+par3int为合成输出的物品data
+Scriptable为合成公式
+[id,data,id,data……]
+以此类推
+168及以上请使用 Item.addCraftRecipe(par1int,par2int,par3int,Scriptable);
+ 
+
+ModPE.setItemCategory(par1int,par2int,par3int);
+调整合成配方分类
+par1int为该合成配方输出的物品id
+par2int为该合成配方要去的分类
+par3int为该合成配方输出的物品data
+(说白了par1int和par3int是搜索合成配方的关键词
+1.6.9以上请使用Item类的setCategory
+
+
+ModPE.showTipMessage(par1String); 
+在屏幕左中下方显示文字
+par1String为显示的文字
+
+ModPE.sendChat(par1String); 
+不明
+ 168及以上请使用Server.sendChat(par1String); 
+ 
+ModPE.setCamera(par1int);
+设定自己的视角为实体的视角
+par1int为实体
+
+ModPE.resetFov(); 
+重设视角放大度数
+
+ModPE.setFov(par1double);
+设定视角放大的度数
+par1double为放大的度数
+
+Level类函数
+
+各种会涉及到存档的函数
+
+Level.setGrassColor(par1int, par2int, par3int);
+par1intX坐标
+par2intZ坐标
+par3int颜色代码:可用920文本编辑器调出
+例子:0x30ff00
+设置草的颜色
+
+
+Level.getGrassColor(par1int, par2int);
+
+par1intX坐标
+par2intZ坐标
+
+返回颜色代码
+
+Level.biomeIdToName(par1int);
+par1int为生态系统id
+返回id对应的生态系统名字
+
+Level.getBiome(par1int, par2int);
+par1int为X坐标
+par2int为Z坐标
+获取生态系统的id
+
+Level.getBiomeName(par1int, par2int);
+par1int为X坐标
+par2int为Z坐标
+获取生态系统的名字
+
+Level.setSpawnerEntityType(par1int, par2int, par3int, par4int);
+par1int X轴坐标
+par2int Y轴坐标
+par3int Z轴坐标
+par4int 实体id
+设置生怪砖生成的实体id类型
+0为不生怪
+
+Level.destroyBlock(par1int, par2int, par3int, par4boolean);
+破坏指定位置的方块
+par1int为X坐标
+par2int为Y坐标
+par3int为Z坐标
+par4boolean为是否掉落物品，为布尔值 true或false
+  
+Level.dropItem(par1double, par2double, par3double, par4double, par5int, par6int, par7int);
+在指定位置掉落物品
+par1double为X坐标
+par2double为Y坐标
+par3double为Z坐标
+par4double为掉落物品的范围(偏移Y坐标) 
+par5int为掉落物品的id
+par6int为掉落物品的数量
+par7int为掉落物品的特殊数据
+ 
+Level.explode(par1double, par2double, par3double, par4double);
+在指定坐标发生指定半径的爆炸
+具体用法跟杂项函数里的explode()一样
+
+Level.getAddress();
+不明
+(获取地址?)
+
+Level.getChestSlot(par1int, par2int, par3int, par4int);
+获取箱子里物品的id
+par1int为箱子的X坐标
+par2int为箱子的Y坐标 
+par3int为箱子的Z坐标 
+par4int为箱子里的格子的位置(横着数) 
+返回值为那个坐标的箱子的格子里的物品的id
+
+Level.getChestSlotCount(par1int, par2int, par3int, par4int);
+获取箱子里物品的数量
+par1int为箱子的X坐标
+par2int为箱子的Y坐标 
+par3int为箱子的Z坐标 
+par4int为箱子里的格子的位置(横着数) 
+返回值为那个坐标的箱子的格子里的物品的数量
+
+Level.getGameMode();
+获取当前存档模式 
+返回值为当前存档的模式
+
+Level.getWorldName();
+获取存档名字
+返回值为当前存档的名字
+
+Level.getWorldDir();
+获取存档根目录的名字(就是放存档文件的那个文件夹)
+返回值为当前存档的名字 
+
+Level.getSignText(par1int, par2int, par3int, par4int);
+获取告示牌的内容
+par1int为牌子的X坐标
+par2int为牌子的Y坐标 
+par3int为牌子的Z坐标 
+par4int为牌子行数 
+返回值为告示牌的第几个行数的内容
+
+Level.getTime()
+获取当前存档时间
+返回值为存档时间
+
+Level.setChestSlot(par1int, par2int, par3int, par4int, par5int, par6int, par7int);
+设定箱子的物品
+par1int为箱子的X坐标
+par2int为箱子的Y坐标 
+par3int为箱子的Z坐标 
+par4int为格子
+par5int为id
+par6int为特殊数据
+par7int为数量
+
+Level.setGameMode(par1int);
+设定游戏模式
+par1int填模式id
+0为生存
+1为创造
+其余的为不知名的生存模式
+
+Level.setNightMode(par1boolean);
+设定晚上模式
+具体用法跟杂项函数里的setNightMode()一样
+
+Level.setSignText(par1int, par2int, par3int, par4int, par5String);
+设定告示牌的内容
+par1int为牌子的X坐标
+par2int为牌子的Y坐标 
+par3int为牌子的Z坐标 
+par4int为牌子行数
+par5String为内容
+
+Level.setSpawn(par1int, par2int, par3int);
+设定玩家重生点
+par1int为X坐标
+par2int为Y坐标 
+par3int为Z坐标 
+
+Level.playSound(par1int,par2int, par3int,par4String,par5int,par6int);
+在指定坐标发出声音
+par1int为X坐标
+par2int为Y坐标 
+par3int为Z坐标 
+par4String为发出的声音
+par5int为声音的大小
+par6int为音调
+
+Level.playSoundEnt(par1int,par2Sting,par3int, par4int);
+指定的实体发出声音
+par1int为发出声音的实体
+par2Sting为发出的声音的名字
+par3int为声音的大小
+par4int为音调
+
+Level.setTile(par1int, par2int, par3int, par4int, par5int);
+设定指定位置的方块
+具体用法跟杂项类的setTile()相同
+
+Level.setTime(par1int);
+设定时间
+par1int为时间
+
+Level.spawnChicken(par1double, par2double, par3double, par4String);
+在指定坐标生成指定皮肤的鸡
+具体用法跟杂项类的spawnChicken()相同 
+
+Level.spawnCow(par1double, par2double, par3double, par4String);
+在指定坐标生成指定皮肤的牛
+具体用法跟杂项类的spawnCow()相同 
+ 
+Level.spawnMob(par1double, par2double, par3double, par4int, par5String);
+在指定坐标生成指定id指定皮肤的实体
+par1double为X坐标
+par2double为Y坐标 
+par3double为Z坐标
+par4int为实体id(详见后面的实体id表)
+par5String为皮肤(在材质包的路径)
+
+Level.getBrightness(par1int, par2int, par3int);
+获取指定坐标亮度
+par1int为X坐标
+par2int为Y坐标 
+par3int为Z坐标 
+返回值为指定坐标的亮度
+
+Level.getData(par1int, par2int, par3int);
+获取指定坐标方块的特殊数据
+par1int为X坐标
+par2int为Y坐标 
+par3int为Z坐标 
+返回值为指定坐标的特殊数据
+
+Level.getFurnaceSlot(par1int, par2int, par3int, par4int);
+获取熔炉里物品的id
+par1int为熔炉的X坐标
+par2int为熔炉的Y坐标 
+par3int为熔炉的Z坐标 
+par4int为熔炉里的格子的位置 
+返回值为那个坐标的熔炉的格子里的物品的id
+ 
+Level.getFurnaceSlotCount(par1int, par2int, par3int, par4int);
+获取熔炉里物品的数量
+par1int为熔炉的X坐标
+par2int为熔炉的Y坐标 
+par3int为熔炉的Z坐标 
+par4int为熔炉里的格子的位置 
+返回值为那个坐标的熔炉的格子里的物品的数量
+ 
+Level.getFurnaceSlotData(par1int, par2int, par3int, par4int);
+获取熔炉里物品的data
+par1int为熔炉的X坐标
+par2int为熔炉的Y坐标 
+par3int为熔炉的Z坐标 
+par4int为熔炉里的格子的位置 
+返回值为那个坐标的熔炉的格子里的物品的data
+ 
+Level.setFurnaceSlot(par1int, par2int, par3int, par4int, par5int, par6int, par7int);
+设定熔炉的物品
+par1int为熔炉的X坐标
+par2int为熔炉的Y坐标 
+par3int为熔炉的Z坐标 
+par4int为格子
+par5int为id
+par6int为特殊数据
+par7int为数量 
+ 
+Level.addParticle(par1int, par2double, par3double, par4double, par5double, par6double, par7double, par8int);
+在指定坐标生成粒子效果
+par1int为例子类型
+par2double为X坐标
+par3double为Y坐标 
+par4double为Z坐标
+par5double为X速度
+par6double为Y速度
+par7double为Z速度 
+par8int为大小
+
+
+粒子效果ID(全)
+
+
+Level.addParticle(type,x,y,z,xVel,yVel,zVel,size)
+ParticleType.
+lava
+blockcrack
+crit
+smoke
+cloud
+flamelava
+redstone
+itemcrack
+snowballpoof
+mobFlame
+heart
+
+无聊时亲自测试的
+ 2，暴击粒子
+4，烟雾粒子
+5，火把粒子
+6，岩浆粒子
+8，红石粒子
+9，10，吃食物粒子
+13，实体燃烧时的粒子
+14，爱心粒子
+15，疾跑粒子
+
+
+Player类函数
+
+各种涉及玩家的函数
+
+
+Player.canFly();
+判断是否可以飞行
+返回布尔值
+
+
+
+Player.isFlying();
+判断玩家是否飞行
+返回布尔值
+
+Player.setCanFly(par1boolean);
+设置玩家能否飞行
+par1boolean布尔值
+
+
+Player.setFlying(par1boolean);
+切换玩家飞行状态
+par1boolean布尔值
+
+
+Player.getPointedBlockData();
+返回玩家十字指针所指的方块的特殊值
+Player.getPointedBlockId();
+返回玩家十字指针所指的方块的id
+Player.getPointedBlockSide();
+返回玩家十字指针所指的方块的面的int
+Player.getPointedBlockX();
+返回玩家十字指针所指的方块X坐标
+Player.getPointedBlockY();
+返回玩家十字指针所指的方块Y坐标
+Player.getPointedBlockZ();
+返回玩家十字指针所指的方块Z坐标
+Player.getPointedEntity();
+返回玩家十字指针所指的实体id
+
+Player.addItemCreativeInv(par1int, par2int, par3int);
+添加物品在创造的背包里
+par1int为id
+par2int为数量
+par3int为特殊数据
+启动器会自动分类
+
+Player.addItemInventory(par1int, par2int, par3int);
+往玩家的背包添加指定物品
+具体用法跟杂项函数的addItemInventory()一样
+
+Player.clearInventorySlot(par1int);
+清除(玩家)背包的物品
+par1int为背包格数
+
+Player.getArmorSlot(par1int);
+获取(玩家)盔甲的id
+par1int为盔甲格数
+返回值为par1int盔甲格的id
+
+Player.getArmorSlotDamage(par1int);
+获取(玩家)盔甲的耐久值(特殊数据)
+par1int为盔甲格数
+返回值为par1int盔甲格的耐久值
+
+Player.getCarriedItem();
+探测(玩家)手持物品id
+具体用法跟杂项函数的getCarriedItem()一样
+
+Player.getCarriedItemCount();
+探测(玩家)手持物品的数量
+返回值为玩家手持物品的数量
+
+Player.getCarriedItemData();
+探测(玩家)手持物品的特殊数据
+返回值为玩家手持物品的特殊数据
+
+Player.getEntity();
+获取玩家的实体
+具体用法跟杂项函数的getPlayerEnt();一样
+
+Player.getInventorySlot(par1int);
+获取(玩家)背包的物品id
+par1int为背包格数
+返回值为背包里par1int格的物品id
+
+Player.getInventorySlotCount(par1int);
+获取(玩家)背包的物品数量
+par1int为背包格数
+返回值为背包里par1int格的物品数量
+
+Player.getInventorySlotData(par1int);
+获取(玩家)背包的物品特殊数据
+par1int为背包格数
+返回值为背包里par1int格的物品特殊数据
+
+Player.getName(par1int);
+获取实体的名字
+par1int为实体
+返回值为该实体的名字
+如果实体不是玩家，返回值永远都是"not a player"
+
+Player.getSelectedSlotId();
+获取玩家正在使用的物品栏格数
+返回值为玩家正在使用的物品栏格数
+
+Player.getX();
+获取玩家X坐标
+具体用法跟杂项函数的getPlayerX()一样
+
+Player.getY();
+获取玩家Y坐标
+具体用法跟杂项函数的getPlayerY()一样 
+
+Player.getZ();
+获取玩家Z坐标
+具体用法跟杂项函数的getPlayerZ()一样
+ 
+Player.isPlayer(par1int);
+判断实体是否为玩家
+返回值为布尔值
+
+Player.setArmorSlot(par1int, par2int, par3int);
+设定盔甲id,特殊数据
+par1int为盔甲格
+par2int为id
+par3int为特殊数据
+
+Player.setHealth(par1int);
+设定玩家的血量
+par1int为血量值(满血为20)
+
+Entity类函数
+
+各种涉及到实体的函数
+
+Entity.setCape(par1int, par2String)
+设置实体披风
+par1int实体id
+par2String皮肤路径
+
+
+Entity.setCollisionSize(par1int, par2double, par3double);
+设置实体碰撞箱大小
+[暂未研究]
+
+Entity.getAnimalAge(par1int);
+获取实体的年龄
+par1int为实体
+返回值为实体的年龄值(0为成熟，24000为幼儿)
+玩家永远都是0
+
+Entity.getEntityTypeId(par1int);
+获取实体的实体id
+par1int为实体
+返回值为实体id(详见后面实体id表)
+
+Entity.getHealth(par1int);
+获取实体的血量
+par1int为实体
+返回值为实体的血量值
+
+Entity.getPitch(par1int);
+获取实体的的Y轴视角，既纵轴视角
+par1int为实体
+返回值为实体的Y轴视角，既纵轴视角 
+
+Entity.getVelX(par1int);
+获取实体X轴的速度
+par1int为实体
+返回值为实体的X轴的速度 
+该函数的精确数据未知 
+
+Entity.getVelY(par1int);
+获取实体Y轴的速度
+par1int为实体
+返回值为实体的Y轴的速度 
+该函数的精确数据未知 
+
+Entity.getVelZ(par1int);
+获取实体Z轴的速度
+par1int为实体
+返回值为实体的Z轴的速度
+该函数的精确数据未知
+
+Entity.getX(par1int);
+获取实体X坐标
+par1int为实体
+返回值为实体的X坐标
+ 
+Entity.getY(par1int);
+获取实体Y坐标
+par1int为实体
+返回值为实体的Y坐标 
+
+Entity.getYaw(par1int);
+获取实体Y坐标
+par1int为实体
+返回值为实体的Y坐标 
+
+Entity.getZ(par1int);
+获取实体Z坐标
+par1int为实体
+返回值为实体的Z坐标 
+
+Entity.remove(par1int);
+移除实体
+par1int为实体
+玩家移除后会看不到玩家，并且不能移动
+
+Entity.rideAnimal(par1int, par2int);
+实体骑上实体
+具体用法跟杂项函数的rideAnimal()一样
+
+Entity.setAnimalAge(par1int, par2int);
+设定实体年龄
+par1unt为实体
+par2int为年龄(0为成熟，24000为幼儿)
+不要给猪牛鸡羊以外的实体进行设定年龄，会闪退的，别问我是怎么知道的
+
+Entity.setCarriedItem(par1int, par2int, par3int, par4int);
+设定实体手持的物品
+par1int为实体
+par2int为物品id
+par3int为数量
+par4int为特殊数据
+(只能给僵尸猪人，骷髅，玩家设定物品，其余的均无效)
+
+Entity.setFireTicks(par1int, par2int);
+设定实体着火时间
+par1int为实体
+par2int为着火时间
+(设定为0无法消除着火)
+
+Entity.setHealth(par1int, par2int);
+设定实体血量
+par1int为实体
+par2int为设定的血量
+(设定为0或0以下会死，但不会掉落任何物品)
+
+Entity.setMobSkin(par1int, par2String);
+设定实体皮肤
+par1int为实体
+par2String为图片(在材质包的路径)
+
+Entity.setPosition(par1int, par2double, par3double, par4double);
+设定实体坐标
+具体用法跟杂项函数的setPosition()一样
+
+Entity.setPositionRelative(par1int, par2double, par3double, par4double);
+设定实体对于自己的距离
+具体用法跟杂项函数的setPositionRelative()一样
+
+Entity.setRenderType(par1int, par2int);
+设定实体的类别(模型)
+par1int为实体
+par2int为模型id(详见后面模型id表)
+
+Entity.setRot(par1int, par2double, par3double);
+设定指定实体视角
+具体用法跟杂项函数的setRot()一样
+
+Entity.setSneaking(par1int, par2boolean);
+设定指定实体潜行
+par1int为实体
+par2boolean为布尔值，true或false
+(好像设定玩家以外的实体无效)
+
+Entity.setVelX(par1int, par2double);
+让实体向X轴前进
+具体用法跟杂项函数的setVelX()一样
+
+Entity.setVelY(par1int, par2double);
+让实体向Y轴前进
+具体用法跟杂项函数的setVelY()一样
+ 
+
+Entity.setVelZ(par1int, par2double);
+让实体向Z轴前进
+具体用法跟杂项函数的setVelZ()一样 
+
+Entity.spawnMob(par1double, par2double, par3double, par4int, par5String);
+已停用！
+具体用法与Level类的Level.spawnMob()相同
+
+Entity.setNameTag(par1int,par2String);
+设定指定实体头上的名字锘牌
+par1int为实体
+par2String为名字
+只能给mobs使用(有AI的实体)
+包括
+鸡           10
+牛           11
+猪           12
+羊           13
+僵尸          32
+苦力怕        33
+骷髅          34
+蜘蛛          35
+僵尸猪人       36 
+
+Entity.getMobSkin(par1int);
+获取实体的皮肤(在材质包里的路径)
+par1int为实体
+返回值为实体的皮肤(在材质包里的路径)
+自然生成的无AI实体不会有皮肤的
+获取会崩溃的
+
+Entity.getNameTag(par1int);
+获取实体的锘牌里的字
+par1int为实体
+返回值为实体的锘牌里的字 
+ 
+Entity.getRenderType(par1int);
+获取实体的模型(类别)id
+par1int为实体
+返回值为实体的模型(类别)id
+ 
+Entity.getRider(par1int);
+获取骑着实体的另一个实体
+par1int为实体
+返回值为骑着实体的另一个实体
+ 
+Entity.getRiding(par1int); 
+获取实体骑着的实体
+par1int为实体 
+返回值为实体骑着的实体 
+
+Entity.getUniqueId(par1int);
+获取实体的UUid
+par1int为实体
+UUid相当于实体的系列码
+储存在Entity.dat里
+永远不会变
+
+Block类函数
+
+涉及到方块的函数
+
+Block.defineBlock(par1int, par2String, par3Object, par4Object, par5Object, par6Object);
+设定方块
+par1int为方块的id(0~255)
+par2String为方块名字
+par3Object为方块材质名字(在terrain.meta里的名字引用) (详见后面材质方法)
+par4Object为材料原id(就是把方块的物理等属性设定成id里的那个方块)
+par5Object为是否透明，为布尔值，true或false 
+par6Object为其模型(详见后面方块模型表)
+现在这个函数还存在许多漏洞
+
+Block.setColor(par1int, par2Scriptable);
+设定方块强制渲染(对已存在的方块似乎无效)
+par1int为方块id(0~255)
+par2Scriptable为HTML字符(格式为 [HTML字符] )
+
+Block.setDestroyTime(par1int, par2double);
+设定破坏方块的时间
+par1int为方块id(0~255)
+par2int为破坏需要的时间
+
+Block.setExplosionResistance(par1int, par2double);
+设定方块的爆炸阻力
+par1int为方块id(0~255)
+par2double为方块的爆炸阻力
+
+Block.setLightLevel(par1int, par2int);
+设定方块的发光等级
+par1int为方块id(0~255)
+par2int为方块发光的等级(0~15)
+
+Block.setRenderLayer(par1int, par2int);
+设定方块的性质属性(就是看起来的样子，没有别的改变)
+par1int为方块id(0~255)
+par2int为属性id(已知水为2，玻璃为1,0为不透明)
+
+Block.setShape(par1int, par2double, par3double, par4double, par5double, par6double, par7double);
+设定方块的形状
+par1int为方块id(0~255)
+par2double为方块偏移X轴(开始)
+par3double为方块偏移Y轴(开始)
+par4double为方块偏移Z轴(开始)
+par5double为方块大小X轴(结束)
+par6double为方块大小Y轴(结束)
+par7double为方块大小Z轴(结束)
+
+Block.getRenderType(par1int);
+返回一个方块的模型id
+par1int为方块的id(0~255) 
+(详见后面方块模型表)
+ 
+Block.setRenderType(par1int, par2int);
+设定方块的模型id
+par1int为方块的id 
+par2int为方块模型id
+(详见后面方块模型表)
+  
+Item类函数
+
+各种涉及到物品的函数
+
+
+Item.setHandEquipped(par1int, par2boolean);
+par1int填变成工具形态的物品id
+par2boolean填布尔值，是否切换
+把Item变成立体形态[比较一下剑和物品就知道了]
+
+Item.addCraftRecipe(par1int, par2int, par3int, par4Scriptable);
+添加合成配方
+par1int为合成输出的物品id
+par2int为合成输出的物品数量
+par3int为合成输出的物品data
+Scriptable为合成公式
+[id,数量,data,id,数量,data……]
+以此类推 
+
+Item.addFurnaceRecipe(par1int, par2int, par3int);
+添加熔炉配方
+par1int为烧的物品id
+par2int为烧出来的物品id
+par3int为烧出来的物品data
+ 
+Item.getName(par1int, par2int, par3boolean);
+获取物品名字前缀
+par1int为id
+par2int为data
+par3boolean不明(填true正常获取，false什么也获取不了)
+ 
+Item.setMaxDamage(par1int, par2int);
+设定物品最大损坏值
+par1int为id
+par2int为物品最大损坏值
+ 
+Item.setCategory(par1int, par2int, par3int);
+设定合成配方的分类
+par1int为该合成配方输出的物品id
+par2int为该合成配方要去的分类
+par3int为该合成配方输出的物品data
+(说白了par1int和par3int是搜索合成配方的关键词
+
+Item.addShapedRecipe(par1int, par2int, par3int, par4Scriptable, par5Scriptable);
+添加图形化合成配方
+par1int为合成输出的物品id
+par2int为合成输出的物品数量
+par3int为合成输出的物品data
+par4:填合成表
+par5:合成表对应物品id,data
+例子:木合成皮革盔甲
+Item.addShapedRecipe(298,1,0,["   ","aaa","a a"],["a",17,0]);
+
+
+
+
+Server类函数
+
+各种涉及到服务器的函数
+
+Server.joinServer(par1String, par2int);
+进入服务器
+par1String为IP地址
+par2为port端口
+
+Server.sendChat(par1String);
+向服务器发送聊天信息
+par1String为发送的内容
+
+Server.getAddress();
+返回服务器的地址
+
+Server.getAllPlayerNames();
+返回一个数组，全部玩家的名字
+
+Server.getAllPlayers();
+返回一个数组，全部玩家的实体
+
+Server.getPort();
+返回服务器的端口
+
+
+Renderer类函数
+
+涉及到实体模型的函数
+(该函数多数为在类里面函数，所以分级)
+内部的函数的前缀必须为外部的返回值
+Renderer类{
+
+createHumanoidRenderer()
+新建一个人类模型的容器
+
+get(par1int)
+获取一个实体模型容器
+par1int为实体模型id(详见后面实体模型表)
+
+Render类{
+
+getModel()
+获取一个模型容器的实体模型
+
+model类{
+
+getPart(par1String)
+获取实体模型单元
+par1String为实体模型单元名称
+(只能填
+"body"
+"head"
+"rightLeg"
+"leftLeg"
+"rightArm"
+"leftArm")
+
+part类{
+
+clear()
+清除整个模型单元
+
+setTextureOffset(par1int,par2int)
+设定附着材质的坐标偏移
+par1int为X偏移
+par2int为Y偏移 
+
+addBox(par1Float,par2Float,par3Float,par4int,par5int,par6int,par7Float) 
+在指定坐标加入一个长方体
+par1Float为X坐标里对于矩阵的偏移 
+par2Float为Y坐标里对于矩阵的偏移 
+par3Float为Z坐标里对于矩阵的偏移 
+par4int为长方形的长 
+par5int为长方形的高
+par6int为长方形的宽
+par7Float为长方形各边增加的长度
+
+setRotationPoint(par1Float,par2Float,par3Float)
+设定矩阵的坐标偏移
+par1Float为X矩阵的偏移 
+par2Float为Y矩阵的偏移 
+par3Float为Z矩阵的偏移 
+
+setTextureSize(par1Float,par2Float)
+设定附着材质的大小
+par1Float为宽
+par2Float为高
+
+   }
+  } 
+ }
+}
+
+GUI类函数
+
+未知的函数
+
+GUI.getScreenWidth();
+返回一个常数0
+
+GUI.getScreenHeight();
+返回一个常数0
+
+end
+
+本篇不涉及GUI和线程
+因为那不是关于ModPE的资料
+需要GUI的，自己去学安卓，Java和JavaScript
+
+
+以下为钩子函数(只有在activity运行单机存档时才可以触发)，原作者不明
+
+
+function explodeHook(Entity,x,y,z,power,OnFire)
+一爆炸触发
+Entity触发爆炸的实体
+x,y,z坐标
+power爆炸范围或威力?
+OnFire引起火灾？
+
+function selectLevelHook(){} 
+一加载存档就触发
+比function newLevel(){}
+快几Tick 
+
+感谢DH工作室的神圣使者转载
+
+如有侵权，请原作者尽快与我联系
+
+当执行了特定动作时，这些函数会运行并执行其他函数
+1.function useItem(x,y,z,itemId,blockId,side,itemDamage,blockDamage){}
+当进行一次点击时(如使用物品或放置方块，食用食物不包括在内)会触发这个函数，并返回数据。
+x:被点击方块的x坐标
+y:被点击方块的y坐标
+z:被点击方块的z坐标
+itemId:点击时手里拿的物品id(空手为0)
+blockId:被点击方块的id
+side:方块被从哪个方向点击
+itemDamage:点击时手里拿的物品附加值(伤害值)
+blockDamage:被点击方块的附加值(伤害值)
+
+2.function attackHook(attacker,victim){}
+当点击或攻击了一个生物mob(动物，怪物，玩家(待确认))时会触发这个函数，并返回数据。
+attacker:进行了点击或攻击动作的mob
+victim:被点击或攻击的mob
+
+3.function modTick(){}
+每刻(1/20s 0.05s)执行一次
+
+4.function procCmd(cmd){}
+在聊天里输入以"/"开头的话文字并执行(回车)时会触发
+cmd:在聊天里输入的以"/"开头的文字(不包含"/")
+
+5.function newLevel(){}
+当世界被载入时(出现"Building terrain"时)会触发
+
+6.function leaveGame(){}
+当离开当前世界(返回主菜单)时会触发
+
+7.function entityAddedHook(entity){}
+当一个新的实体被添加(包括箭，下落的方块，点燃的TNT等)时会触发
+entity:被添加的自然实体
+
+8.function entityRemovedHook(entity){}
+当一个实体(包括箭，下落的方块，点燃的TNT等)消失或死亡时会触发
+entity:被移除的实体
+
+9.function deathHook(murderer, victim){}
+当一个生物mod死亡时会触发
+murderer:造成死亡的实体
+victim:死亡的实体
+
+10.function levelEventHook(entity,eventType,x,y,z,data){}
+当门(木门,栅栏门,陷阱门)被打开或关闭时会触发
+当羊吃掉草时触发
+睡觉时触发
+entity:动作的实体(观测数据。总是为0)
+eventType:事件类型(观测数据。开关门数据为1003，羊吃草的数据为2001,睡觉的数据为9800)
+x,y,z:被点击的门方块的坐标，被吃掉的草方块的坐标，睡觉时为(0,0,0)
+data:未知(观测数据。开关门，睡觉的数据为0，羊吃草的数据为2)
+
+11.function blockEventHook(x,y,z,eventType,data){}
+每三秒检查所有箱子的开关状态
+x,y,z:箱子的坐标
+eventType:事件类型(观测数据为1)
+data:未知(观测数据。关闭为0，打开为1，打开过程中为2(待确认)。检查大箱子时第二个被放置的箱子数值改变，另一个一直为0)
+
+12.function destroyBlock(x,y,z,side){}
+当一个方块被破坏时会触发
+x,y,z:方块的坐标
+side:方块被从哪个方向破坏 
+
+end
+
+if()判断语句，for循环,break,while循环,switch设置条件教程
+
+一 if()判断语句
+if(条件)
+{
+内容
+}
+如果多个判断直接加上去
+
+else if{}
+就是当前面的不成立
+才判断这个
+
+当上面的全部if()判断语句不成立
+就执行else{内容}
+
+else
+{
+内容
+}
+
+二 for循环
+for(变量;条件;动作)
+{
+内容
+}
+
+如for(var i=0;i<8;i++){  }
+设定i变量为0
+当i小于8
+就执行大括号里的内容 同时i自加(i=i+1;)
+
+如果循环没有结束，就不执行后面的函数
+
+for(;;)为死循环
+(循环时比较卡，建议使用线程处理)
+
+三 break函数
+上面我们讲到了for(;;)是死循环
+那假如我想退出这个循环怎么办?
+就使用break函数
+比如这个
+var i=0
+for(;;)
+{
+
+i++
+if(i==8)
+{
+break
+}
+}
+死循环的执行内容
+i自加
+当i等于8时，就跳出循环
+继续执行后面的函数
+
+该函数只能用于循环
+
+四 while循环
+一共有两种格式
+while(条件)
+{
+内容
+}
+
+do
+{
+内容
+}
+while(条件)
+
+唯一的区别就是do{}while会先执行一次内容再判断
+
+一旦条件成立就不断执行里面的内容
+
+while循环常用在C语言里用来混淆代码
+
+五 switch设置条件
+
+switch(你要设定的变量)
+{
+case: 条件
+内容
+break
+case: 条件
+……
+}
+如这个
+switch(u)
+{
+case: 1
+i=i+5
+break
+
+case: 2
+i=i+2
+break
+
+case: 3
+i=i+6
+break
+
+default
+i++
+break
+}
+这个的意思是设置u为条件
+如果u等于1
+i就+5
+如果u等于2
+i就+2
+如果u等于3
+i就+6
+如果都不是
+i就自加
+
+
+
+end
+
+附表
+
+实体id表
+最新实体id表
+名字实体id
+玩家和照相机0
+鸡10
+牛11
+猪12
+羊13
+狼14
+村民15
+僵尸32
+苦力怕33
+骷髅34
+蜘蛛35
+僵尸猪人36
+史莱姆37
+末影人38
+蠹虫39
+掉落物品64
+点燃的TNT65
+掉落的方块66
+箭80
+雪球81
+鸡蛋82
+画83
+矿车84
+
+实体类别表(模型)
+玩家3
+
+方块材质方法
+1.id法
+大家都知道方块的材质都是在terrain.meta里
+看起来非常乱，其实是有规矩的，方块贴图是按0~255排序
+找到你需要的id
+后面在加个排列值
+填进去就行了
+(未确定160+是否可以使用)
+2.数组法
+[]
+大家如果需要六个面的方块就用这个
+后面的是排列值
+ [["stone",0], ["stone",0] , ["stone",0] , ["stone",0] , ["stone",0] , ["stone",0] , ["stone",0] ]
+ 如果有特殊数据，就直接加一段上去
+ [ ["stone",0], ["stone",0] , ["stone",0] , ["stone",0] , ["stone",0] , ["stone",0] , ["grass",0], ["grass",0], ["grass",0] , ["grass",0] , ["grass",0] , ["grass",0] ]
+ 
+ 方块模型表
+ 0 标准
+1 花
+2 火把
+3 火
+4 流体
+6 作物
+7 门
+8 台阶
+10 楼梯
+11 栅栏
+13 仙人掌
+14 床
+18 玻璃板
+19 植物的茎
+21 栅栏门 
+
+排列值
+
+该值是由a5命名的，因为没有官方名称
+之所以命名为排列值，是因为
+一个个材质数据排在一起
+所以就是排列值
+相当于特殊数据
+一个材质引用可以储存多个材质数据
+相当于数组
+当为0时引用第一个数据
+当为1时引用第二个数据
+……
+以此类推
+但超越了材质储存的数据
+比如
+"Texture"材质引用储存了7个材质数据
+我填写了8,⑨,10……
+超过它就会变成Max(最大的那个排列值)
+还是引用第七个数据
+
+end
+
+  ——最后修改时间为2015.2.21 15:12
+  
+  
+  
+  
